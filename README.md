@@ -29,7 +29,10 @@ This repo mirrors the `~/.claude/` directory structure. Tracked files contain co
 ├── tasks/                             # [excluded] In-session task tracking
 ├── telemetry/                         # [excluded] Usage telemetry
 ├── todos/                             # [excluded] Todo items
-└── usage-data/                        # [excluded] Insights analytics data
+├── usage-data/                        # [excluded] Insights analytics data
+└── skills/
+    └── repo-audit/
+        └── SKILL.md                   # /repo-audit custom skill
 
 reference/
 └── prompts/
@@ -48,6 +51,26 @@ templates/
 | `.claude/statusline-command.ps1` | PowerShell script for custom Claude Code statusline with ANSI colors, token count display. |
 | `.claude/statusline-command.sh` | Bash equivalent with git branch, context usage, cost, and session duration. |
 | `templates/CLAUDE.md.template` | Starting point for creating per-project CLAUDE.md files. |
+| `.claude/skills/repo-audit/SKILL.md` | Custom `/repo-audit` skill — deep security & hygiene audit using 5 parallel sub-agents. |
+
+## Custom Skills
+
+### `/repo-audit [path]`
+
+Deep repository security and hygiene audit. Launches 5 parallel sub-agents to scan for:
+
+1. **Secrets & credentials** — API keys, tokens, passwords, private keys
+2. **PII & sensitive data** — names, emails, account numbers, financial data
+3. **Gitignore effectiveness** — sensitive files that should be excluded but aren't
+4. **Git history** — secrets committed then removed, amended commits, deleted files
+5. **Repo hygiene** — large binaries, missing LICENSE, build artifacts, IDE files
+
+Writes a `SECURITY-AUDIT.md` report and auto-adds it to `.gitignore`.
+
+```
+/repo-audit                          # audit current repo
+/repo-audit D:/wa_git/some-repo      # audit a specific repo
+```
 
 ## Usage
 
