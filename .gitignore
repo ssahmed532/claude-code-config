@@ -1,0 +1,49 @@
+# Claude Code sensitive/ephemeral data
+# These directories mirror ~/.claude/ structure but contain
+# session-specific, cached, or sensitive data that should not be committed.
+
+# Credentials and auth
+.claude/.credentials.json
+
+# Session transcripts and history
+.claude/sessions/
+.claude/history.jsonl
+
+# Per-project session data (contains conversation transcripts)
+.claude/projects/
+
+# Caches and ephemeral state
+.claude/cache/
+.claude/stats-cache.json
+.claude/mcp-needs-auth-cache.json
+
+# Debug logs
+.claude/debug/
+
+# Telemetry data
+.claude/telemetry/
+
+# Task and todo state (session-scoped)
+.claude/tasks/
+.claude/todos/
+
+# Shell snapshots
+.claude/shell-snapshots/
+
+# File history
+.claude/file-history/
+
+# Downloads
+.claude/downloads/
+
+# IDE integration state
+.claude/ide/
+
+# Internal backups
+.claude/backups/
+
+# Usage data and reports (contains session analysis)
+.claude/usage-data/
+
+# Plugin marketplace clones (large, fetched on demand)
+.claude/plugins/marketplaces/

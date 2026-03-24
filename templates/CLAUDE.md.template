@@ -1,0 +1,37 @@
+# Project: <PROJECT_NAME>
+
+## Overview
+
+<!-- Brief description of what this project does -->
+
+## Build / Run / Test Commands
+
+```bash
+# Build
+<build_command>
+
+# Run
+<run_command>
+
+# Test
+<test_command>
+
+# Lint / Format
+<lint_command>
+```
+
+## Architecture
+
+<!-- Key components, data flow, or directory structure -->
+
+## Conventions
+
+<!-- Naming, formatting, patterns specific to this project -->
+
+## Gotchas
+
+<!-- Non-obvious pitfalls, known issues, or things Claude got wrong before -->
+
+## Dependencies
+
+<!-- Key dependencies and why they're used -->
